@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+.logo {
+}
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+.menu ul {
+}
+.menu a {
+}
+.menu a {
+  display: flex;
+  padding: 4px;
+  border-radius: 8px 8px;
+}
+
+.menu a:hover {
+  background-color: #3ac0ba;
+  color: black;
+}

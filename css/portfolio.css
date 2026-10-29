@@ -1,0 +1,91 @@
+.portfolio {
+  padding-top: 40px;
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+/* Назва категорії підзаголовка (Зін, Стікери, Картки тощо) */
+.category-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Блок-обгортка для кожної окремої групи робіт */
+.portfolio-group {
+  margin-bottom: 65px;
+}
+
+/* 1. Верхній блок: Зін (ліворуч) та Стікери (праворуч) */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+/* Стилі для зображень та відео всередині елементів портфоліо */
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.stickers-row {
+  display: flex;
+  gap: 10px;
+}
+
+.stickers-row img {
+  width: 50%;
+  border-radius: 6px;
+}
+
+/* 2. Блок з картками (9 елементів в один рядок) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px; /* Змінено з auto на конкретний відступ 10px */
+}
+
+.cards-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* 3. Блок з постерами (4 елементи в один рядок) */
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.posters-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.arts-section {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.arts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.arts-grid img {
+  height: 432px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}

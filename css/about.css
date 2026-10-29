@@ -1,0 +1,67 @@
+.about {
+  padding-top: 40px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between; /* або flex-start / center */
+  align-items: center;
+  gap: 80px; /* Задаємо фіксовану, комфортну відстань між текстом і фото */
+}
+
+.about-text {
+  flex: 1;
+  max-width: 650px; /* Обмежуємо ширину тексту, щоб фото не відлітало надто далеко */
+}
+
+.about-text h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about-text h3 {
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.skills-icons {
+  display: flex;
+  gap: 26.55px;
+}
+
+.skills-icons img {
+  width: 66.36px;
+  height: 66.36px;
+  object-fit: contain;
+}
+
+.about-avatar {
+  flex-shrink: 0; /* Гарантує, що фото ніколи не буде стискатися браузером */
+}
+
+.about-avatar img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.college-link {
+  color: #fffcea;
+  text-decoration: underline;
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
+.college-link:hover {
+  color: #3ac0ba;
+  text-decoration: none;
+}

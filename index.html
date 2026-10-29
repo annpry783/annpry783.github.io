@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANN PRY — Graphic Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="./css/portfolio.css" />
+  <link rel="stylesheet" href="./css/contacts.css" />
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="#home">
+            <img src="./images/logo.png" alt="Logo" /> </a>
+        </div>
+
+
+        <ul class="menu">
+          <li>
+            <a href="#about">Про мене</a>
+          </li>
+          <li>
+            <a href="#portfolio">Портфоліо</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="home" class="home section">
+      <img src="./images/title.png" alt="Title" class="title" />
+    </div>
+
+    <div id="about" class="about section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Про мене</h2>
+          <p>
+            Привіт, я Аня — графічна дизайнерка, художниця і фотографка. Мені 19 років, навчаюся у
+            <a href="https://artcollege.lviv.ua/" target="_blank" class="college-link">Львівському коледжі ім. І.
+              Труша</a>
+            на спеціальності "Графічний дизайн".
+          </p>
+          <p>Поєдную всі свої хобі одразу, бо неможу займатися чимось одним :)</p>
+          <p>У дизайні ціную концептуальність та емоцію. Мій підхід до дизайну та мистецтва базований на пошуку глибшого
+            сенсу. Люблю шукати метафори, працювати із символікою та передавати точні відчуття й настрій через форму,
+            колір
+            і композицію, щоб кожна робота мала власну історію.</p>
+
+          <h3>Вміння:</h3>
+          <div class="skills-icons">
+            <img src="./images/ps.png" alt="Photoshop" />
+            <img src="./images/ai.png" alt="Illustrator" />
+            <img src="./images/id.png" alt="InDesign" />
+            <img src="./images/lr.png" alt="Lightroom" />
+            <img src="./images/figma.png" alt="Figma" />
+          </div>
+        </div>
+
+        <div class="about-avatar">
+          <img src="./images/avatar.jpg" alt="ANN PRY Photo" />
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="portfolio" class="portfolio section">
+      <h2>Портфоліо</h2>
+
+      <!-- Категорія 1: Зін та Стікери -->
+      <div class="portfolio-group grid-2-col">
+        <div class="portfolio-item">
+          <span class="category-title">Зін</span>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="./zin.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-item">
+          <span class="category-title">Стікери</span>
+          <div class="stickers-row">
+            <img src="./images/stickers1.jpg" alt="Стікери 1" />
+            <img src="./images/stickers2.jpg" alt="Стікери 2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Категорія 2: Картки -->
+      <div class="portfolio-group">
+        <span class="category-title">Картки</span>
+        <div class="cards-grid">
+          <img src="./images/card1.jpg" alt="Картка 1" />
+          <img src="./images/card2.jpg" alt="Картка 2" />
+          <img src="./images/card3.jpg" alt="Картка 3" />
+          <img src="./images/card4.jpg" alt="Картка 4" />
+          <img src="./images/card5.jpg" alt="Картка 5" />
+          <img src="./images/card6.jpg" alt="Картка 6" />
+          <img src="./images/card7.jpg" alt="Картка 7" />
+          <img src="./images/card8.jpg" alt="Картка 8" />
+          <img src="./images/card9.jpg" alt="Картка 9" />
+        </div>
+      </div>
+
+      <!-- Категорія 3: Постери -->
+      <div class="portfolio-group">
+        <span class="category-title">Постери</span>
+        <div class="posters-grid">
+          <img src="./images/poster1.png" alt="Постер 1" />
+          <img src="./images/poster2.jpg" alt="Постер 2" />
+          <img src="./images/poster3.jpg" alt="Постер 3" />
+          <img src="./images/poster4.png" alt="Постер 4" />
+        </div>
+      </div>
+
+      <!-- Категорія 4: Арти -->
+      <div class="portfolio-group">
+        <span class="category-title">Арти</span>
+        <div class="arts-grid">
+          <img src="./images/art1.jpg" alt="Арт 1" />
+          <img src="./images/art2.jpg" alt="Арт 2" />
+          <img src="./images/art3.jpg" alt="Арт 3" />
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Секція Контакти -->
+    <div id="contacts" class="contacts section">
+      <h2>Контакти</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/h._.annie?igsh=MTE2aXhqc21qcmFqeQ%3D%3D&utm_source=qr" target="_blank"
+          class="social-card">
+          <img src="./images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.behance.net/a12c0b22" target="_blank" class="social-card">
+          <img src="./images/behance.png" alt="Behance" />
+        </a>
+        <a href="https://www.tiktok.com/@h._.annie8" target="_blank" class="social-card">
+          <img src="./images/tiktok.png" alt="TikTok" />
+        </a>
+        <a href="https://t.me/hannie_skz" target="_blank" class="social-card">
+          <img src="./images/telegram.png" alt="Telegram" />
+        </a>
+      </div>
+      <div class="footer-bg"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

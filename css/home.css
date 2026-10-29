@@ -1,0 +1,30 @@
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -80px;
+
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
+  z-index: 1;
+
+  padding-left: 5%;
+}
+
+.home .title {
+  max-width: 1360px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -60px;
+  z-index: 2;
+}
