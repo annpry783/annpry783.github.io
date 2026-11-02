@@ -60,3 +60,16 @@ a:hover {
 .page {
   padding-top: 80px;
 }
+
+@media (max-width: 768px) {
+  .page,
+  .header-wrapper {
+    max-width: 92%; /* Залишаємо невеликі поля з боків, щоб нічого не впиралося в край */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    overflow-x: hidden; /* Запобігає горизонтальному скролу */
+  }
+}

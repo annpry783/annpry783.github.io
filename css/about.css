@@ -68,14 +68,20 @@
 
 @media (max-width: 768px) {
   .about-content {
-    flex-direction: column; /* Ставимо текст і фото одне під одним */
+    flex-direction: column; /* Переносимо фото під текст */
     align-items: center;
-    text-align: center;
+    text-align: left; /* або center, якщо хочете по центру */
+  }
+
+  .about-avatar {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .about-avatar img {
-    width: 250px; /* Зменшуємо аватарку для телефону */
-    height: 250px;
-    margin-top: 30px;
+    width: 260px; /* Зменшуємо для мобільного */
+    height: 260px;
   }
 }

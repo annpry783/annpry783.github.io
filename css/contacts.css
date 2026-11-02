@@ -47,3 +47,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: space-around; /* Рівномірний розподіл з проміжками */
+    gap: 15px;
+  }
+
+  .social-card img {
+    width: 60px; /* Робимо іконки трохи компактнішими для телефона */
+    height: 60px;
+  }
+}
