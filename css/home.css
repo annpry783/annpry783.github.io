@@ -2,6 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: -80px;
@@ -14,9 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
   padding-left: 8%;
   z-index: 1;
-
   padding-left: 5%;
 }
 
@@ -27,4 +28,30 @@
   position: relative;
   top: -60px;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .home {
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+
+    /* Головна магія: робимо так, щоб картинка зменшувалася і вміщувалася повністю */
+    background-size: contain;
+    background-color: #000; /* Чорний фон по боках, якщо пропорції відрізняються */
+  }
+
+  .home .title {
+    top: 0;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
 }

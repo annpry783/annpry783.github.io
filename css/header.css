@@ -37,3 +37,14 @@
   background-color: #3ac0ba;
   color: black;
 }
+
+@media (max-width: 768px) {
+  .menu a {
+    font-size: 16px; /* Зменшуємо текст у меню */
+    padding: 2px 4px;
+  }
+
+  .menu {
+    gap: 0.5em;
+  }
+}
