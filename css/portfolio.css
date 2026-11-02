@@ -27,6 +27,13 @@
   gap: 30px;
 }
 
+@media (max-width: 768px) {
+  .grid-2-col {
+    grid-template-columns: 1fr; /* Одна колонка замість двох */
+    gap: 20px;
+  }
+}
+
 /* Стилі для зображень та відео всередині елементів портфоліо */
 .portfolio-item img,
 .portfolio-item video {
@@ -52,6 +59,20 @@
   gap: 10px; /* Змінено з auto на конкретний відступ 10px */
 }
 
+/* Для мобільних робимо менше колонок */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки на телефоні */
+  gap: 8px;
+}
+
+/* А для планшетів і ноутбуків повертаємо 9 колонок */
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
 .cards-grid img {
   width: 100%;
   border-radius: 6px;
@@ -64,9 +85,27 @@
   gap: 10px;
 }
 
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоні */
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .posters-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на великих екранах */
+  }
+}
+
 .posters-grid img {
   width: 100%;
   border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .arts-grid img {
+    height: 220px; /* Зменшуємо висоту для невеликих екранів */
+  }
 }
 
 .arts-section {

@@ -65,3 +65,17 @@
   color: #3ac0ba;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Ставимо текст і фото одне під одним */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-avatar img {
+    width: 250px; /* Зменшуємо аватарку для телефону */
+    height: 250px;
+    margin-top: 30px;
+  }
+}
