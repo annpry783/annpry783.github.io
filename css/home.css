@@ -14,10 +14,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 8%;
-  z-index: 1;
-
   padding-left: 5%;
+  z-index: 1;
 }
 
 .home .title {
@@ -31,17 +29,40 @@
 
 @media (max-width: 768px) {
   .home {
-    flex-direction: column; /* Ставимо фото і заголовок вертикально */
-    justify-content: center;
-    padding-left: 0;
-    padding: 40px 20px;
+    /* На телефоні прибираємо небезпечні vw і робимо блок у межах екрана */
+    width: 100%;
     height: auto;
-    min-height: 80vh;
+    min-height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+
+    flex-direction: column; /* Ставимо все вертикально */
+    justify-content: flex-start;
+    padding: 20px 0;
+
+    /* Робимо так, щоб фонова картинка була повноцінною і не обрізалась */
+    background-image: none; /* Відключаємо фоновий режим на мобільному */
+  }
+
+  /* Перетворюємо фон на нормальну адаптивну картинку через псевдо-елемент або фон */
+  .home::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 380px; /* Фіксуємо акуратну висоту для головного фото на телефоні */
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
   }
 
   .home .title {
     top: 0;
-    margin-top: 20px;
-    max-width: 100%;
+    margin-top: 25px;
+    max-width: 90%; /* Щоб заголовок ANN PRY не впирався в краї екрана */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
