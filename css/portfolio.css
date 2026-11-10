@@ -7,7 +7,7 @@
   margin-bottom: 60px;
 }
 
-/* Назва категорії підзаголовка (Зін, Стікери, Картки тощо) */
+/* Назва категорії (Зін, Стікери, Картки тощо) */
 .category-title {
   display: block;
   font-size: 16px;
@@ -15,26 +15,18 @@
   margin-bottom: 10px;
 }
 
-/* Блок-обгортка для кожної окремої групи робіт */
+/* Обгортка для кожної групи робіт */
 .portfolio-group {
   margin-bottom: 65px;
 }
 
-/* 1. Верхній блок: Зін (ліворуч) та Стікери (праворуч) */
+/* 1. Зін (ліворуч) та Стікери (праворуч) */
 .grid-2-col {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 30px;
 }
 
-@media (max-width: 768px) {
-  .grid-2-col {
-    grid-template-columns: 1fr; /* Одна колонка замість двох */
-    gap: 20px;
-  }
-}
-
-/* Стилі для зображень та відео всередині елементів портфоліо */
 .portfolio-item img,
 .portfolio-item video {
   width: 100%;
@@ -52,25 +44,11 @@
   border-radius: 6px;
 }
 
-/* 2. Блок з картками (9 елементів в один рядок) */
+/* 2. Картки: 3 колонки на телефоні, 9 на великих екранах */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 10px; /* Змінено з auto на конкретний відступ 10px */
-}
-
-/* Для мобільних робимо менше колонок */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки на телефоні */
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-}
-
-/* А для планшетів і ноутбуків повертаємо 9 колонок */
-@media (min-width: 768px) {
-  .cards-grid {
-    grid-template-columns: repeat(9, 1fr);
-  }
 }
 
 .cards-grid img {
@@ -78,23 +56,11 @@
   border-radius: 6px;
 }
 
-/* 3. Блок з постерами (4 елементи в один рядок) */
+/* 3. Постери: 2 колонки на телефоні, 4 на великих екранах */
 .posters-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-}
-
-.posters-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоні */
-  gap: 10px;
-}
-
-@media (min-width: 768px) {
-  .posters-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки на великих екранах */
-  }
 }
 
 .posters-grid img {
@@ -102,17 +68,7 @@
   border-radius: 6px;
 }
 
-@media (max-width: 768px) {
-  .arts-grid img {
-    height: 220px; /* Зменшуємо висоту для невеликих екранів */
-  }
-}
-
-.arts-section {
-  width: 100%;
-  padding: 40px 0;
-}
-
+/* 4. Арти */
 .arts-grid {
   display: flex;
   flex-wrap: wrap;
@@ -127,4 +83,42 @@
   max-width: 100%;
   border-radius: 4px;
   object-fit: cover;
+}
+
+/* Планшети та ноутбуки */
+@media (min-width: 769px) {
+  .cards-grid {
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+  }
+
+  .posters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== Мобільна версія (має бути в кінці файлу) ===== */
+@media (max-width: 768px) {
+  .portfolio {
+    padding-top: 20px;
+  }
+
+  .portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .portfolio-group {
+    margin-bottom: 40px;
+  }
+
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .arts-grid img {
+    width: 100%;
+    height: auto;
+  }
 }

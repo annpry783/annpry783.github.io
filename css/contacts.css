@@ -31,7 +31,7 @@
 }
 
 .social-card img {
-  width: 100x;
+  width: 100px; /* було 100x — друкарська помилка */
   height: 100px;
   object-fit: contain;
 }
@@ -46,4 +46,34 @@
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* ===== Мобільна версія ===== */
+@media (max-width: 768px) {
+  .contacts {
+    min-height: auto;
+    padding-top: 20px;
+  }
+
+  .contacts h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .social-links {
+    margin-bottom: 40px;
+  }
+
+  .social-card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* Фіксований розмір фото, видно лише квіти (як на ноутбуці).
+     Більше значення в background-size = більше квітів, менше обличчя */
+  .footer-bg {
+    height: 160px;
+    background-size: auto 450px;
+    background-position: bottom center;
+  }
 }

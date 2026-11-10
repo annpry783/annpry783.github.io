@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -61,24 +62,14 @@ a:hover {
   padding-top: 80px;
 }
 
+/* ===== Мобільна версія ===== */
 @media (max-width: 768px) {
-  /* Забороняємо будь-яким елементам вилазити за ширину екрана і зсуватися */
-  html,
   body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    overflow-x: hidden; /* страховка від горизонтального скролу */
   }
 
-  /* Вирівнюємо секцію "Про мене" та текст, щоб вони не тікали вліво */
-  .about,
-  .about-content,
-  .about-text {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  .section {
+    min-height: auto;
+    padding-top: 40px;
   }
 }
