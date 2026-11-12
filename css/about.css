@@ -4,14 +4,17 @@
 
 .about-content {
   display: flex;
-  justify-content: space-between; /* або flex-start / center */
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 80px; /* Задаємо фіксовану, комфортну відстань між текстом і фото */
+  gap: 80px;
 }
 
 .about-text {
   flex: 1;
-  max-width: 650px; /* Обмежуємо ширину тексту, щоб фото не відлітало надто далеко */
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-text h2 {
@@ -33,6 +36,7 @@
 
 .skills-icons {
   display: flex;
+  flex-wrap: wrap;
   gap: 26.55px;
 }
 
@@ -43,7 +47,7 @@
 }
 
 .about-avatar {
-  flex-shrink: 0; /* Гарантує, що фото ніколи не буде стискатися браузером */
+  flex-shrink: 0;
 }
 
 .about-avatar img {
@@ -66,22 +70,69 @@
   text-decoration: none;
 }
 
+/* ===== Мобільна версія ===== */
 @media (max-width: 768px) {
-  .about-content {
-    flex-direction: column; /* Переносимо фото під текст */
-    align-items: center;
-    text-align: left; /* або center, якщо хочете по центру */
+  .about {
+    padding-top: 20px;
   }
 
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; /* було wrap — через це блок роздувався і обрізався */
+    align-items: stretch;
+    gap: 0;
+  }
+
+  /* дочірні елементи стають прямими flex-елементами .about-content,
+     тому їх можна впорядкувати через order */
+  .about-text {
+    display: contents;
+  }
+
+  /* 1. Заголовок */
+  .about-text h2 {
+    order: 1;
+    font-size: 32px;
+    margin: 0 0 20px;
+  }
+
+  /* 2. Кругле фото одразу після заголовка */
   .about-avatar {
-    margin-top: 40px;
-    width: 100%;
+    order: 2;
     display: flex;
     justify-content: center;
+    margin-bottom: 24px;
   }
 
   .about-avatar img {
-    width: 260px; /* Зменшуємо для мобільного */
-    height: 260px;
+    width: 220px;
+    height: 220px;
+  }
+
+  /* 3. Текст */
+  .about-text p {
+    order: 3;
+    font-size: 15px;
+    margin: 0 0 12px;
+  }
+
+  /* 4. «Вміння:» */
+  .about-text h3 {
+    order: 4;
+    font-size: 18px;
+    margin: 24px 0 16px;
+  }
+
+  /* 5. Іконки: 5×48 + 4×12 = 288px, вміщаються в один рядок */
+  .skills-icons {
+    order: 5;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .skills-icons img {
+    width: 48px;
+    height: 48px;
   }
 }

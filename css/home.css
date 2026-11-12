@@ -2,6 +2,8 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
+  /* фото на всю ширину екрана, незалежно від відступів .page */
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: -80px;
@@ -14,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
   padding-left: 5%;
   z-index: 1;
 }
@@ -27,42 +30,27 @@
   z-index: 2;
 }
 
+/* ===== Мобільна версія ===== */
 @media (max-width: 768px) {
   .home {
-    /* На телефоні прибираємо небезпечні vw і робимо блок у межах екрана */
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
+    /* width: 100vw і margin-left залишаються з десктопу — фото на всю ширину */
+    height: 75vw; /* горизонтальний кадр, можна змінити в межах 65–85vw */
+    min-height: 0;
+    padding: 0 0 0 5%;
 
-    flex-direction: column; /* Ставимо все вертикально */
-    justify-content: flex-start;
-    padding: 20px 0;
-
-    /* Робимо так, щоб фонова картинка була повноцінною і не обрізалась */
-    background-image: none; /* Відключаємо фоновий режим на мобільному */
-  }
-
-  /* Перетворюємо фон на нормальну адаптивну картинку через псевдо-елемент або фон */
-  .home::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 380px; /* Фіксуємо акуратну висоту для головного фото на телефоні */
-    background-image: url("../images/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 6px;
+    background-position: center 60%; /* менше % = кадр вище, більше % = нижче */
+    background-color: #000;
+
+    flex-direction: row;
+    justify-content: flex-start; /* напис зліва */
+    align-items: center; /* і посередині по вертикалі */
   }
 
   .home .title {
     top: 0;
-    margin-top: 25px;
-    max-width: 90%; /* Щоб заголовок ANN PRY не впирався в краї екрана */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    width: 60%;
+    max-width: 280px;
   }
 }
