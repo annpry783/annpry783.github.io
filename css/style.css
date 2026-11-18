@@ -71,5 +71,20 @@ a:hover {
   .section {
     min-height: auto;
     padding-top: 40px;
+
+    /* Зупиняє прокрутку на 70px нижче верху екрана, тому header не перекриває заголовок.
+       Висота header ≈ 62px (лого 42px + відступи 20px). */
+    scroll-margin-top: 70px;
+  }
+
+  /* Збільшені відступи між блоками */
+  .about,
+  .portfolio {
+    padding-bottom: 60px;
+  }
+
+  /* Головне фото лежить під header, тому йому відступ не потрібен */
+  .home {
+    scroll-margin-top: 0;
   }
 }
