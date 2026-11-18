@@ -73,7 +73,8 @@
 /* ===== Мобільна версія ===== */
 @media (max-width: 768px) {
   .about {
-    padding-top: 20px;
+    padding-top: 80px;
+    scroll-margin-top: 10px;
   }
 
   .about-content {
@@ -94,7 +95,7 @@
   .about-text h2 {
     order: 1;
     font-size: 32px;
-    margin: 0 0 20px;
+    margin: 0 0 40px;
   }
 
   /* 2. Кругле фото одразу після заголовка */
@@ -102,7 +103,7 @@
     order: 2;
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
   }
 
   .about-avatar img {

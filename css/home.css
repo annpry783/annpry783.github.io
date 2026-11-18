@@ -48,9 +48,10 @@
   }
 
   .home .title {
-    top: 0;
+    top: -5px;
     margin: 0;
-    width: 60%;
-    max-width: 600px;
+    width: 100%;
+    max-width: none;
+    flex-shrink: 0;
   }
 }
