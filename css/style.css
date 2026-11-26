@@ -83,5 +83,6 @@ a:hover {
   /* Головне фото лежить під header, тому йому відступ не потрібен */
   .home {
     scroll-margin-top: 0;
+    background-image: url("../images/background-mobile.webp");
   }
 }

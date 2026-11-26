@@ -11,9 +11,13 @@
   <meta property="og:url" content="https://annpry783.github.io/">
   <meta property="og:image" content="https://annpry783.github.io/images/og-image.png">
 
+
+  <link rel="preload" as="image" href="./images/background.webp" fetchpriority="high">
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="./images/favicon.png" />
 
 
@@ -23,6 +27,8 @@
   <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="./css/portfolio.css" />
   <link rel="stylesheet" href="./css/contacts.css" />
+
+
 </head>
 
 <body>
@@ -81,7 +87,7 @@
         </div>
 
         <div class="about-avatar">
-          <img src="./images/avatar.jpg" alt="ANN PRY Photo" />
+          <img src="./images/avatar.webp" alt="ANN PRY Photo" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -95,15 +101,15 @@
       <div class="portfolio-group grid-2-col">
         <div class="portfolio-item">
           <span class="category-title">Зін</span>
-          <video autoplay loop muted playsinline width="100%">
+          <video autoplay loop muted playsinline preload="metadata" width="100%">
             <source src="./zin.mp4" type="video/mp4" />
           </video>
         </div>
         <div class="portfolio-item">
           <span class="category-title">Стікери</span>
           <div class="stickers-row">
-            <img src="./images/stickers1.jpg" alt="Стікери 1" />
-            <img src="./images/stickers2.jpg" alt="Стікери 2" />
+            <img src="./images/stickers1.webp" alt="Стікери 1" loading="lazy" decoding="async" />
+            <img src="./images/stickers2.webp" alt="Стікери 2" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -112,15 +118,15 @@
       <div class="portfolio-group">
         <span class="category-title">Картки</span>
         <div class="cards-grid">
-          <img src="./images/card1.jpg" alt="Картка 1" />
-          <img src="./images/card2.jpg" alt="Картка 2" />
-          <img src="./images/card3.jpg" alt="Картка 3" />
-          <img src="./images/card4.jpg" alt="Картка 4" />
-          <img src="./images/card5.jpg" alt="Картка 5" />
-          <img src="./images/card6.jpg" alt="Картка 6" />
-          <img src="./images/card7.jpg" alt="Картка 7" />
-          <img src="./images/card8.jpg" alt="Картка 8" />
-          <img src="./images/card9.jpg" alt="Картка 9" />
+          <img src="./images/card1.webp" alt="Картка 1" loading="lazy" decoding="async" />
+          <img src="./images/card2.webp" alt="Картка 2" loading="lazy" decoding="async" />
+          <img src="./images/card3.webp" alt="Картка 3" loading="lazy" decoding="async" />
+          <img src="./images/card4.webp" alt="Картка 4" loading="lazy" decoding="async" />
+          <img src="./images/card5.webp" alt="Картка 5" loading="lazy" decoding="async" />
+          <img src="./images/card6.webp" alt="Картка 6" loading="lazy" decoding="async" />
+          <img src="./images/card7.webp" alt="Картка 7" loading="lazy" decoding="async" />
+          <img src="./images/card8.webp" alt="Картка 8" loading="lazy" decoding="async" />
+          <img src="./images/card9.webp" alt="Картка 9" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -128,10 +134,10 @@
       <div class="portfolio-group">
         <span class="category-title">Постери</span>
         <div class="posters-grid">
-          <img src="./images/poster1.png" alt="Постер 1" />
-          <img src="./images/poster2.jpg" alt="Постер 2" />
-          <img src="./images/poster3.jpg" alt="Постер 3" />
-          <img src="./images/poster4.png" alt="Постер 4" />
+          <img src="./images/poster1.webp" alt="Постер 1" loading="lazy" decoding="async" />
+          <img src="./images/poster2.webp" alt="Постер 2" loading="lazy" decoding="async" />
+          <img src="./images/poster3.webp" alt="Постер 3" loading="lazy" decoding="async" />
+          <img src="./images/poster4.webp" alt="Постер 4" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -139,9 +145,9 @@
       <div class="portfolio-group">
         <span class="category-title">Арти</span>
         <div class="arts-grid">
-          <img src="./images/art1.jpg" alt="Арт 1" />
-          <img src="./images/art2.jpg" alt="Арт 2" />
-          <img src="./images/art3.jpg" alt="Арт 3" />
+          <img src="./images/art1.webp" alt="Арт 1" loading="lazy" decoding="async" />
+          <img src="./images/art2.webp" alt="Арт 2" loading="lazy" decoding="async" />
+          <img src="./images/art3.webp" alt="Арт 3" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
